@@ -1,0 +1,151 @@
+@charset "utf-8";
+* {
+  margin : 0;
+  padding : 0;
+}
+
+body {
+  background-color: #FFFBFF;
+
+}
+
+/*Mobile*/
+.dgrid {
+  display : grid;
+  grid-template-columns: 1fr 1fr;
+  position : relative;
+  grid-gap: 5px 0px;
+  grid-template-areas:
+  "logo nav"
+  "space space"
+  "ptab pdia"
+  "btab bdia"
+  "footer footer";
+}
+
+
+.logo {
+  grid-area: logo;
+  background-color: #000000;
+
+}
+
+.logo > ul{
+  list-style-type: none;
+}
+
+.logo > ul > li img{
+  position: inline-block;
+  height: 35px;
+  width: auto;
+}
+
+.logo > ul > li:nth-child(2){
+  font-size: 25px;
+  color: #FFFBFF;
+}
+.nav {
+  grid-area: nav;
+}
+.nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000000;
+}
+
+li {
+  float: left;
+}
+
+.nav li a {
+  display: inline-block;
+  width: 80px;
+  color: #FFFBFF;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.nav li a:hover {
+  background-color: #84B082;
+}
+
+.space {
+  grid-area: space;
+  width: 100%;
+  height: 150px;
+}
+
+.ptab {
+  grid-area: ptab;
+  width:80%;
+  height: 300px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  text-align:center;
+}
+
+
+.pdia {
+  grid-area: pdia;
+  width: 80%;
+  height: 300px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  text-align:center;
+
+}
+
+.btab {
+  grid-area: btab;
+  height: 300px;
+  width: 80%;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  text-align:center;
+}
+
+.bdia {
+  grid-area: bdia;
+  height: 300px;
+  width: 80%;
+  margin-top: 120px;
+  margin-bottom: 10px;
+  text-align:center;
+}
+.footer {
+  grid-area: footer;
+  background-color: #000000;
+  text-align: center;
+  margin-top: 50px;
+  width: 100%;
+  height: 50px;
+  border: 5px solid;
+  border-color: #84B082;
+
+}
+
+table{
+  font-family: arial, sans-serif;
+  height: 250px;
+  width: 80%;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+  margin-bottom:20px;
+}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+h2{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}

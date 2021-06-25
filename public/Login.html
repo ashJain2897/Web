@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+  <script src="datatoPdf.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Login COnsole </title>
+  <link rel="stylesheet" href="loginStyle.css">
+</head>
+<body>
+  <div class="grid">
+    <div class="logo">
+      <ul>
+        <li>
+          <a href="#">
+            <img src="res/img/logo.gif" />
+          </a>
+        </li>
+        <li>&ensp;&ensp;सासवड नगर परिषद </li>
+      </ul>
+    </div>
+    <div class ="nav">
+      <ul>
+        <li><a href="index.html">Home </a></li>
+        <li><a href="NewDashboard.html"> Dashboard </a></li>
+        <li><a href="Login.html"> Login </a></li>
+        <li><a href="#"> About Us </a></li>
+      </ul>
+    </div>
+    <div class="bod1">
+      <div id="login_div" class="main-div">
+        <h3>Login</h3>
+        <input type="email" placeholder="Email..." id="email_field" />
+        <input type="password" placeholder="Password..." id="password_field" />
+        <button onclick="login()">Login to Account</button>
+      </div>
+
+      <div id="user_div" class="loggedin-div">
+        <h3>Welcome User</h3>
+        <p id="user_para"></p>
+       <button id="genpdf" class="printbtn" onclick=makepdf()>Generate PDF</button>
+        <button class="logoutbtn" onclick="logout()">Logout</button>
+      </div>
+    </div>
+    <!-- -->
+   <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+      apiKey: "AIzaSyCai1TBt_bfhbVYlzWj9VIwMnJ_8O_h6zE",
+        authDomain: "python-example-3ebd2.firebaseapp.com",
+        databaseURL: "https://python-example-3ebd2.firebaseio.com",
+        projectId: "python-example-3ebd2",
+        storageBucket: "python-example-3ebd2.appspot.com",
+        messagingSenderId: "690553899684",
+        appId: "1:690553899684:web:baf1c8eb2d53c726"
+      };
+      firebase.initializeApp(config);
+  </script>
+  <script src="loginIndex.js"></script>
+  <div class="footer"><br /><a href="#">Nerdsphere Technologies  &copy; 2019. All Rights Reserved.</a></div>
+  </div>
+</body>
+</html>

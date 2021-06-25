@@ -1,0 +1,309 @@
+@charset "utf-8";
+
+* {
+
+  margin : 0;
+  padding : 0;
+}
+
+body {
+  background-color: #FFFBFF;
+
+}
+
+.grid {
+  display : grid;
+  grid-template-columns: 1fr 1fr;
+  position : relative;
+  grid-gap: 5px 0px;
+  grid-template-areas:
+  "logo nav"
+  "bod1 bod1"
+  "infotab infotab"
+  "bod2 bod2"
+  "bod3 bod3"
+  "footer footer";
+}
+
+.logo {
+  grid-area: logo;
+  background-color: #000000;
+}
+
+.logo > ul{
+  list-style-type: none;
+}
+
+.logo > ul > li img{
+  position: inline-block;
+  height: 35px;
+  width: auto;
+}
+
+.logo > ul > li:nth-child(2){
+  font-size: 25px;
+  color: #FFFBFF;
+}
+.nav {
+  grid-area: nav;
+}
+
+.nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000000;
+}
+
+li {
+  float: left;
+}
+
+.nav li a {
+  display: inline-block;
+  color: #FFFBFF;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 15px;
+  width: 80px;
+}
+
+.nav li a:hover {
+  background-color: #84B082;
+}
+
+.bod1 {
+  grid-area: bod1;
+  position: relative;
+
+  /*max-width: 400px;*/
+}
+
+.bod1 img {
+  width: 100%;
+  height: 92%;
+  opacity: 0.8;
+
+}
+
+.bod1 > p {
+
+  position: relative;
+  bottom: 30%;
+  left: 10%;
+  width: 30%;
+  font-size: 40px;
+  padding: 12px 24px;
+  height: 15%;
+  width: 35%;
+  color: white;
+  text-shadow: 2px 2px rgba(132,176,130, 0.7);
+}
+
+.bod1 .ico1 {
+  opacity: 1;
+  position: absolute;
+  top: 15%;
+  right: 20%;
+  padding: 12px 24px;
+  height: 15%;
+  width: 15%;
+}
+
+
+.bod1 .ico2 {
+  opacity: 1;
+  position: absolute;
+  top: 35%;
+  right: 20%;
+  padding: 12px 24px;
+  height: 15%;
+  width: 15%;
+}
+
+.bod1 .count1{
+  opacity: 1;
+  position: absolute;
+  top: 21%;
+  font-weight: 600;
+  font-family :sans-serif;
+  color:white;
+  font-size: 40px;
+  right: 13%;
+}
+
+.bod1 .count2 {
+  opacity: 1;
+  position: absolute;
+  top: 41%;
+  font-size: 40px;
+  right: 13%;
+  font-weight: 600;
+  font-family :sans-serif;
+  color: white;
+}
+
+.bod1 .txt1{
+  opacity: 1;
+  position: absolute;
+  top:26%;
+  padding-top:12px;
+  font-weight: 600;
+  font-family :sans-serif;
+  color: white;
+  font-size: 20px;
+  right: 6%;
+
+}
+
+
+.bod1 .txt2{
+  opacity: 1;
+  position: absolute;
+  top: 46%;
+  right: 7%;
+  padding-top:12px;
+  font-weight: 600;
+  font-family :sans-serif;
+  color: white;
+  font-size: 20px;
+
+}
+
+.infotab {
+  grid-area: infotab;
+  font-size: 18px;
+  text-align: left;
+  padding-top: 20px;
+}
+.infotab h1 {
+  text-align: center;
+  background-color:  #84B082;
+}
+
+
+.bod2 {
+  grid-area: bod2;
+  display : grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  position : relative;
+  grid-template-areas:
+  "bod21 bod22 bod23";
+}
+.bod2 a {
+  color: #84B082;
+  text-decoration: none;
+  font-size: 20px;
+
+}
+
+
+.bod21 {
+  grid-area: bod21;
+  position: relative;
+}
+.bod22 {
+  grid-area: bod22;
+  position: relative;
+}
+.bod23 {
+  grid-area: bod23;
+  position: relative;
+}
+
+.bod21 h5 {
+  width : 60%;
+  position: absolute;
+  top: 50%;
+  text-align: center;
+}
+
+.bod21 img {
+  width: 60%;
+  height: 60%;
+}
+.bod21 ul {
+  position: absolute;
+  width: 50%;
+  left: 10%;
+  text-align: left;
+  font-size: 15px;
+}
+
+.bod22 h5 {
+  width : 60%;
+  position: absolute;
+  top: 50%;
+  text-align: center;;
+}
+
+.bod22 img {
+  width: 60%;
+  height: 60%;
+}
+
+.bod22 ul {
+  position: absolute;
+  width: 50%;
+  left: 10%;
+  text-align: left;
+  font-size: 15px;
+}
+
+.bod23 h5 {
+  width : 60%;
+  position: absolute;
+  top: 50%;
+  text-align: center;
+}
+
+.bod23 img {
+  width: 60%;
+  height: 60%;
+}
+
+.bod23 ul {
+  position: absolute;
+  width: 60%;
+  left: 10%;
+  text-align: left;
+  font-size: 15px;
+}
+
+.bod3 {
+  grid-area: bod3;
+  position: relative;
+}
+
+.bod3 h1{
+  text-align: center;
+  background-color: #84B082;
+}
+
+.bod3 ul {
+  width: 70%;
+  padding-left: 30px;
+  padding-top: 20px;
+  text-align: left;
+  line-height: 1.6;
+  left: 20%;
+
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #000000;
+  text-align: center;
+  margin-top: 10%;
+  width: 100%;
+  height: 50px;
+  border: 5px solid;
+  border-color: #84B082;
+}
+
+.footer a{
+  text-decoration: none;
+  color: grey;
+}
